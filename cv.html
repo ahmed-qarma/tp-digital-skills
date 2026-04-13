@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="CV de Ahmed Saleh Omar Abdullah Qarma – Étudiant en Génie Informatique à la FST Tanger" />
+  <meta name="author" content="Ahmed Saleh Omar Abdullah Qarma" />
+  <title>CV de Ahmed Saleh Omar Abdullah Qarma - Développeur Web</title>
+  <style>
+    /* ── Google Fonts ── */
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+    /* ── Reset & Variables ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0d1b2a;
+      --blue:   #1b4f72;
+      --accent: #e67e22;
+      --light:  #f4f7fb;
+      --white:  #ffffff;
+      --grey:   #6c757d;
+      --border: #d0dce8;
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--light);
+      color: var(--navy);
+      line-height: 1.7;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--navy);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.8rem 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: #cbd5e0;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    section {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem 2.5rem;
+      margin-top: 2rem;
+      box-shadow: 0 2px 12px rgba(13,27,42,0.07);
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.8rem;
+      color: var(--white);
+      line-height: 1.15;
+    }
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.55rem;
+      color: var(--blue);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--navy) 60%, var(--blue));
+      border-radius: var(--radius);
+      margin-top: 2rem;
+      padding: 3rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      box-shadow: 0 4px 24px rgba(13,27,42,0.18);
+      animation: fadeUp 0.4s ease both;
+    }
+
+    header img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      flex-shrink: 0;
+      box-shadow: 0 0 0 6px rgba(230,126,34,0.15);
+    }
+
+    header .header-text h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #a0bcd4;
+      border: none;
+      padding: 0;
+      margin-bottom: 0;
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    /* ── Lists ── */
+    ul, ol { padding-left: 1.4rem; }
+    li { margin-bottom: 0.4rem; }
+
+    /* ── Contact section ── */
+    #contact ul { list-style: none; padding: 0; }
+    #contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0.55rem;
+    }
+    #contact li::before {
+      content: "▸";
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+    #contact a { color: var(--blue); text-decoration: none; }
+    #contact a:hover { text-decoration: underline; }
+
+    /* ── Table ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.7rem 1rem;
+      text-align: left;
+    }
+    thead th {
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    tbody tr:nth-child(even) { background: var(--light); }
+    tbody tr:hover { background: #e8f0fa; }
+
+    /* ── Experience articles ── */
+    article {
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.4rem;
+      background: var(--light);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    article p { color: var(--grey); font-size: 0.92rem; margin: 0.3rem 0 0.5rem; }
+    article ul { font-size: 0.95rem; }
+
+    /* ── Formation ── */
+    #formation ol { padding-left: 1.2rem; }
+    #formation li { margin-bottom: 1rem; }
+    #formation .diplome { font-weight: 700; color: var(--navy); }
+    #formation .etablissement { color: var(--grey); font-size: 0.9rem; }
+
+    /* ── Form ── */
+    .form-group { margin-bottom: 1.2rem; }
+
+    label {
+      display: block;
+      font-weight: 500;
+      font-size: 0.88rem;
+      margin-bottom: 0.35rem;
+      color: var(--navy);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.6rem 0.85rem;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--navy);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(27,79,114,0.12);
+    }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem 1.5rem;
+      margin-top: 0.4rem;
+    }
+
+    .radio-group label, .checkbox-group label {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+
+    .required-star { color: var(--accent); margin-left: 2px; }
+
+    .btn-row { display: flex; gap: 1rem; margin-top: 1.8rem; }
+
+    button[type="submit"] {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    button[type="submit"]:hover { background: #cf6d17; transform: translateY(-1px); }
+
+    button[type="reset"] {
+      background: transparent;
+      color: var(--grey);
+      border: 1.5px solid var(--border);
+      padding: 0.7rem 2rem;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    button[type="reset"]:hover { border-color: var(--grey); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--navy);
+      color: #8fa6bc;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+      border-radius: var(--radius) var(--radius) 0 0;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header { flex-direction: column; text-align: center; }
+      h1 { font-size: 2rem; }
+      section { padding: 1.5rem 1.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav>
+    <a href="#top">Accueil</a>
+    <a href="#contact">Coordonnées</a>
+    <a href="#apropos">À propos</a>
+    <a href="#formation">Formation</a>
+    <a href="#competences">Compétences</a>
+    <a href="#experience">Expérience</a>
+    <a href="#formulaire-contact">Me contacter</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- ═══════════════════════════════════════════
+         EN-TÊTE
+    ═══════════════════════════════════════════ -->
+    <header id="top">
+      <img
+        src="images/photo.jpg"
+        alt="Photo de profil d'Ahmed Saleh Omar Abdullah Qarma"
+        width="200"
+      />
+      <div class="header-text">
+        <h1>Ahmed Saleh Omar Abdullah Qarma</h1>
+        <h2>Étudiant en Génie Informatique</h2>
+      </div>
+    </header>
+    <!-- ═══════════════════════════════════════════
+         COORDONNÉES
+    ═══════════════════════════════════════════ -->
+    <section id="contact">
+      <h2>Coordonnées</h2>
+      <ul>
+        <li>
+  <a href="mailto:salehomarabdullah.qarmaahmed@etu.uae.ac.ma">
+    salehomarabdullah.qarmaahmed@etu.uae.ac.ma
+  </a>
+</li>
+        <li>Téléphone : +212 641348324</li>
+        <li>Adresse : Tanger, Maroc</li>
+        <li>
+          <a href="https://github.com/ahmed-qarma/tp-digital-skills" target="_blank" rel="noopener noreferrer">
+            Profil GitHub (ouvre dans un nouvel onglet)
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         À PROPOS
+    ═══════════════════════════════════════════ -->
+    <section id="apropos">
+      <h2>À propos</h2>
+      <p>
+        Je suis <strong>Ahmed Saleh Omar Abdullah Qarma</strong>, étudiant en
+        <strong>Génie Informatique</strong> à la Faculté des Sciences et Techniques
+        de Tanger (FST Tanger). Passionné par le développement web et la
+        programmation, je développe mes compétences en HTML, CSS, JavaScript et
+        langages de programmation tels que le C. Je suis à la recherche d'un stage
+        qui me permettrait de mettre en pratique mes connaissances académiques et de
+        contribuer à des projets innovants dans le domaine du numérique.
+      </p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FORMATION
+    ═══════════════════════════════════════════ -->
+    <section id="formation">
+      <h2>Formation</h2>
+      <ol>
+        <li>
+          <span class="diplome">Licence Sciences et Techniques – Génie Informatique</span><br />
+          <span class="etablissement">
+            Faculté des Sciences et Techniques de Tanger (FST Tanger) — 2024 – en cours
+          </span><br />
+          Formation axée sur la programmation, les réseaux, les systèmes d'information
+          et le développement web.
+        </li>
+        <li>
+          <span class="diplome">Baccalauréat Sciences Mathématiques</span><br />
+          <span class="etablissement">Lycée Tanger — 2024</span><br />
+          Option Sciences Mathématiques avec mention.
+        </li>
+      </ol>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         COMPÉTENCES
+    ═══════════════════════════════════════════ -->
+    <section id="competences">
+      <h2>Compétences</h2>
+      <table border="1" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Catégorie</th>
+            <th>Compétences</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Langages de programmation</td>
+            <td>C, HTML5, CSS3</td>
+          </tr>
+          <tr>
+            <td>Frameworks &amp; Bibliothèques</td>
+            <td>Notions de base – en cours d'apprentissage</td>
+          </tr>
+          <tr>
+            <td>Outils &amp; Technologies</td>
+            <td>Visual Studio Code, Git, Canva, Microsoft Office (PowerPoint)</td>
+          </tr>
+          <tr>
+            <td>Langues</td>
+            <td>Arabe (natif), Français (courant), Anglais (intermédiaire)</td>
+          </tr>
+          <tr>
+            <td>Compétences diverses</td>
+            <td>Maîtrise de l'outil informatique, Conduite automobile (Permis B)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         EXPÉRIENCE PROFESSIONNELLE
+    ═══════════════════════════════════════════ -->
+    <section id="experience">
+      <h2>Expérience Professionnelle</h2>
+
+      <article>
+        <h3>Projet académique – Présentation PowerPoint</h3>
+        <p><strong>FST Tanger</strong> — 2025</p>
+        <ul>
+          <li>Conception et réalisation d'une présentation professionnelle avec Microsoft PowerPoint.</li>
+          <li>Structuration du contenu et mise en page visuelle adaptée au public cible.</li>
+          <li>Présentation orale devant un groupe d'étudiants et enseignants.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Projet personnel – Présentation Canva</h3>
+        <p><strong>Projet personnel</strong> — 2025</p>
+        <ul>
+          <li>Création d'une présentation graphique et interactive à l'aide de l'outil Canva.</li>
+          <li>Maîtrise des fonctionnalités de design numérique : modèles, typographie, couleurs.</li>
+          <li>Publication et partage de la présentation en ligne.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FORMULAIRE DE CONTACT
+    ═══════════════════════════════════════════ -->
+    <section id="formulaire-contact">
+      <h2>Me contacter</h2>
+      <p>
+        Vous êtes recruteur et souhaitez me proposer une opportunité ? Remplissez le
+        formulaire ci-dessous et je vous répondrai dans les plus brefs délais.
+      </p>
+
+      <form action="#" method="POST">
+
+        <!-- ── a) Informations du recruteur ── -->
+        <h3>Informations du recruteur</h3>
+
+        <div class="form-group">
+          <label for="nom-recruteur">
+            Nom du recruteur <span class="required-star">*</span>
+          </label>
+          <input
+            type="text"
+            id="nom-recruteur"
+            name="nom_recruteur"
+            required
+            minlength="2"
+            maxlength="50"
+            placeholder="Ex : Jean Dupont"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="entreprise">
+            Entreprise <span class="required-star">*</span>
+          </label>
+          <input
+            type="text"
+            id="entreprise"
+            name="entreprise"
+            required
+            minlength="2"
+            maxlength="100"
+            placeholder="Ex : TechCorp Maroc"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email-recruteur">
+            Email <span class="required-star">*</span>
+          </label>
+          <input
+            type="email"
+            id="email-recruteur"
+            name="email_recruteur"
+            required
+            placeholder="recruteur@entreprise.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="telephone-recruteur">Téléphone (optionnel)</label>
+          <input
+            type="tel"
+            id="telephone-recruteur"
+            name="telephone_recruteur"
+            pattern="[0-9]{10}"
+            placeholder="Ex : 0612345678"
+          />
+        </div>
+
+        <!-- ── b) Objet du contact ── -->
+        <h3>Objet du contact</h3>
+
+        <div class="form-group">
+          <label>Type de contact <span class="required-star">*</span></label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="type_contact" value="stage" required />
+              Proposition de stage
+            </label>
+            <label>
+              <input type="radio" name="type_contact" value="emploi" />
+              Offre d'emploi
+            </label>
+            <label>
+              <input type="radio" name="type_contact" value="freelance" />
+              Mission freelance
+            </label>
+            <label>
+              <input type="radio" name="type_contact" value="autre" />
+              Autre
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="disponibilite">Date de disponibilité souhaitée (optionnel)</label>
+          <input
+            type="date"
+            id="disponibilite"
+            name="disponibilite"
+          />
+        </div>
+
+        <!-- ── c) Message détaillé ── -->
+        <h3>Message détaillé</h3>
+
+        <div class="form-group">
+          <label for="message">
+            Votre message <span class="required-star">*</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="8"
+            cols="50"
+            required
+            maxlength="1000"
+            placeholder="Décrivez votre proposition, le poste, la durée, les missions attendues… (1000 caractères max)"
+          ></textarea>
+        </div>
+
+        <!-- ── d) Compétences recherchées ── -->
+        <div class="form-group">
+          <p><strong>Compétences recherchées (optionnel) :</strong></p>
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="competences" value="html_css" />
+              HTML/CSS
+            </label>
+            <label>
+              <input type="checkbox" name="competences" value="javascript" />
+              JavaScript
+            </label>
+            <label>
+              <input type="checkbox" name="competences" value="react" />
+              React
+            </label>
+            <label>
+              <input type="checkbox" name="competences" value="nodejs" />
+              Node.js
+            </label>
+            <label>
+              <input type="checkbox" name="competences" value="python" />
+              Python
+            </label>
+          </div>
+        </div>
+
+        <!-- ── e) Boutons d'action ── -->
+        <div class="btn-row">
+          <button type="submit">Envoyer</button>
+          <button type="reset">Réinitialiser</button>
+        </div>
+
+      </form>
+    </section>
+
+  </div><!-- /container -->
+
+  <!-- ═══════════════════════════════════════════
+       PIED DE PAGE
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <p>&copy; 2026 Ahmed Saleh Omar Abdullah Qarma. Tous droits réservés.</p>
+    <p><a href="#top">↑ Retour en haut</a></p>
+  </footer>
+
+</body>
+</html>
